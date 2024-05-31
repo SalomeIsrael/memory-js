@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <script src="app.js"></script>
+
+</head>
+<body>
+    <header>
+        <a href="index.html">Accueil</a>
+
+    <!-- Formulaire -->
+        <h1>Inscrivez-vous</h1>
+        <fieldset>
+            <legend>Formulaire :</legend>
+    <!-- Method POST différente de get (mis sinon en auto) car données sensibles recuillies -->
+            <form action="" method="post">
+    <!-- Autofocus = 1er champs qui apparait + curseur actif dedans -->
+    <!-- Required = obligatoire -->
+                <label for="nom">Nom d'utilisateur* :</label>
+                <input type="text" 
+                id="Nom" 
+                name="Nom" 
+                autofocus required  
+                pattern=" [A-Za-z] " 
+                title="Saisissez votre nom">
+                <br>
+                <br>
+            <form action="" method="get"></form>
+                <label for="email">Email :</label> 
+                <input type="email"
+                id="email"
+                name="email"
+                title="Saisissez votre adresse email">
+                <br>
+                <br>
+                <label for="MDP">Mot de passe:</label>
+                <input type="password"
+                id="MDP"
+                name="MDP"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Saisissez un mot de passe de minimum 8 caractères 
+                comportant des lettres minuscules et majuscules et des chiffres"
+                <br>
+                <br>
+                <p>* : obligatoire</p>
+                <input type="submit">
+                <input type="reset">
+            </form>
+        </fieldset>
+        <br>
+    </header>
+</body>
+</html>
